@@ -29,5 +29,5 @@ jobs:
 
       - name: Deploy build to EC2
         run:
-          rsync -avz dist/ \    # sync the build file with the instance. 
+          rsync -avz dist/ \   # sync the build file with the instance. 
           ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:${{ secrets.EC2_APP_PATH }}
